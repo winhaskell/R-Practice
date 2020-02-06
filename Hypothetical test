@@ -1,0 +1,71 @@
+hypothetical test
+
+某种电子原件的寿命X（以小时计）服从正态分布N（μ, σ)其中μ, σ均未知。
+现测得12个元件的寿命如下：
+181 180 111 214 229 649 249 264 362 268 485 170 (1)
+181 180 111 214 229 649 249 264 362 168 485 170 (2)
+
+问是否有理由认为元件的平均寿命大于200小时？
+
+
+R语言t.test
+
+      t.test(x,y=NULL,alternative=c("two.sided","less","greater"),mu=0,paired=FALSE,var.equal=FALSE,conf.level=0.95)
+      
+mu表示原假设μ0，conf.level置信水平，即1-α，通常是0.95，
+var.equal是逻辑变量，var.equal=TRUE表示两样本方差σ相同，var.equal=FALSE（缺省）表示两样本方差σ不同。
+
+(1)
+X<-c(181,180,111,214,229,649,249,264,362,268,485,170)
+t.test(X,alternative = "greater",mu=200)
+
+        One Sample t-test
+
+data:  X
+t = 1.8286, df = 11, p-value = 0.04734
+alternative hypothesis: true mean is greater than 200
+95 percent confidence interval:
+ 201.4362      Inf
+sample estimates:
+mean of x 
+ 280.1667 
+
+p-value = 0.04734 < 0.05 拒绝原假设 
+即平均寿命大于200小时
+
+
+(2)
+
+> X<-c(181,180,111,214,229,649,249,264,362,168,485,170)
+> t.test(X,alternative = "greater",mu=200)
+
+        One Sample t-test
+
+data:  X
+t = 1.6023, df = 11, p-value = 0.06869
+alternative hypothesis: true mean is greater than 200
+95 percent confidence interval:
+ 191.323     Inf
+sample estimates:
+mean of x 
+ 271.8333 
+
+ 
+p-value = 0.06869 >0.05 不能拒绝原假设
+即平均寿命不大于200小时.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
