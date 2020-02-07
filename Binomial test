@@ -1,0 +1,52 @@
+联合国人员在世界上66个大城市的生活花费指数（以纽约市为100）按自小至大的次序排列如下（这里北京的指数为99）：
+假设这个样品是从世界许多大城市中随即抽样得到的。试用符号检验分析，北京是在中位数之上，还是在中位数之下。
+
+样本的中位数 M 作为城市生活水平的中间值，因此需要检验： H0: M ≥ 99,  H1: M < 99.
+
+      
+ X <- c(68, 75, 78 ,80 ,81 ,81 ,82, 83, 83, 84, 84, 84, 85, 85, 86, 86, 86, 
+        86, 87 ,87, 88, 88,88, 88, 88, 89 ,89, 89, 89, 90 ,90 ,91 ,91,
+        91 ,91, 92, 93, 93, 96, 96, 96, 98, 99, 100,
+        100, 100, 102, 103 ,104, 104, 104 ,105, 106, 109, 109,
+        110 ,110, 110, 111, 113, 115, 116, 117 ,118, 155 ,199)
+        
+     binom.test(sum(X>99), length(X), al="l")
+     
+     
+   Exact binomial test
+
+data:  sum(X > 99) and length(X)
+number of successes = 23, number of trials = 66, p-value = 0.009329
+alternative hypothesis: true probability of success is less than 0.5
+95 percent confidence interval:
+ 0.0000000 0.4563087
+sample estimates:
+probability of success 
+             0.3484848 
+			 
+       
+       sum(X > 99) 表示样本中大于99的个数
+       al是alternative的缩写，"l"是"less"的缩写
+       计算出的P值小于0.05,拒绝原假设,
+       也就是说,北京的生活水平高于世界的中位水平.
+       
+   
+       
+binom.test(sum(X<99), length(X), al="l")
+
+        Exact binomial test
+
+data:  sum(X < 99) and length(X)
+number of successes = 42, number of trials = 66, p-value = 0.9907
+alternative hypothesis: true probability of success is less than 0.5
+95 percent confidence interval:
+ 0.0000000 0.7350414
+sample estimates:
+probability of success 
+             0.6363636 
+       
+       
+       // https://blog.csdn.net/hbr2014/article/details/79189806
+       // https://blog.csdn.net/qq_38984677/article/details/82730981
+       // https://blog.csdn.net/ch1209498273/article/details/78314138
+       
