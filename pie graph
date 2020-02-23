@@ -1,0 +1,11 @@
+> # Create data for the pie graph.
+> x <- c(21, 88, 10, 66)
+> labels <- c("London", "New York", "Singapore", "Taiwan")
+> # Give the chart file a name.
+> png(file = "city.jpg")
+> # Plot the chart.
+> pie(x,labels)
+> # Save the file.
+> dev.off()
+
+
