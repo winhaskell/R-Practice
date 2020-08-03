@@ -11,3 +11,159 @@ https://smac-group.github.io/ds/
 
 
 
+abs	绝对值
+sqrt	平方根
+exp	e^x次方
+log	自然对数
+log2,log10	其他对数
+sin,cos,tan	三角函数
+sinh,cosh,tanh	双曲函数
+poly	正交多项式
+polyroot	多项式求根
+
+
+assign	赋值操作，等同于“<-”
+rm	删除对象
+ls	显示内存中的对象
+str	显示对象的内在属性或简要说明对象
+ls.str	展示内存中所有对象的详细信息
+length	返回对象中元素的个数
+names	显示数据的名称，对于数据框则是列名字
+levels	因子向量的水平
+dim	数据的维度
+nrow	矩阵或数据框的行数
+ncol	列数
+rownames	数据的行名字
+colnames	列名字
+class	数据类型
+mode	数据模式
+head	数据的前n行
+tail	数据的后n行
+summary	显示对象的概要
+attr	x的属性类型
+
+
+max	最大元素
+min	最小元素
+range	最小值和最大值组成的向量
+sum	和
+prod	元素连乘
+pmax	向量间相同下标进行比较最大者，并组成新的向量
+pmin	向量间相同下标进行比较最小者，并组成新的向量
+cumsum	累积求和
+cumprod	连乘
+cummax	最大
+cummin	最小
+mean	均值
+weighted,mean	加权平均数
+median	中位数
+
+
+sd	标准差
+norm	正态分布
+f	F分布
+unif	均匀分布
+cauchy	柯西分布
+binom	二项分布
+geom	几何分布
+chisq.test	卡方检验，进行独立性检验
+prop.test	对总体均值进行假设检验
+shapiro.test	正态分布检验
+t.test	T检验，对总体均值进行区间估计
+aov	方差分析
+anova	一个或多个模型对象的方差分析
+
+
+
+#向量  
+#向量在循环语句中较为广泛  
+M=vector(length = 8);M  #生成一个长为8的布尔向量  
+M[1]="1";M             #赋值之后就会定义为字符  
+M[1]=1;M              #赋值之后，定义为数值  
+
+
+
+
+##数据查看函数  
+names(iris)           #查看所有变量名字  
+str(iris)             #变量属性（int整数,num数值）  
+unique(iris$setosa)   #查看分类变量的水平  
+table(iris$setosa)    #分类水平，不同水平的个数（=unique+sum功能）  
+summary(iris)         #所有变量各自的均值、分位数、众数、最大、最小值等统计量，在回归中就是系数表等  
+attributes(iris)      #包括names（变量名）、row.names（序号的名称）、class(数据形式)  
+
+
+
+
+我这里用个因子例子来说明，希望能讲清楚  
+> gl(2,5)            #新建一个因子  
+[1] 1 1 1 1 1 2 2 2 2 2  
+Levels: 1 2  
+> class(gl(2,5))   #查看变量的类，显示为因子；  
+[1] "factor"  
+> mode(gl(2,5))     #查看数据大类，显示为数值型；  
+[1] "numeric"  
+> typeof(gl(2,5))    #查看数据细类，显示为整数型；  
+[1] "integer"  
+#来自：http://f.dataguru.cn/thread-99785-1-1.html  
+
+
+
+
+#矩阵的基本知识  
+t()       #转置  
+det()     #行列式，方阵  
+x%*%y     #向量内积  
+x%o%y#向量外积  
+  
+  
+A=array(1:9,dim=c(3,3))  
+A*A    #这个代表矩阵内两两子元素相乘  
+A%*%A #才是我们想要的结果  
+crossprod(A,A)    #等于t(A)%*%A  
+crossprod(t(A),A) #等于A%*%A，所以需要t（A）一下  
+
+t	矩阵转置
+rowsum	行求和
+colsum	列求和
+rowmeans	行平均
+colmeans	列平均
+solve	对线性方程求解或求矩阵的逆
+diag	对角阵
+
+
+library	加载包
+data	加载制定数据集
+load	加载save或者save.image保存的数据
+read.table	读取表格
+read.csv	读取以逗号分割的表格
+read.delim	读取以tab分割个表格
+read.fwf	以fixed width formatted 形式读取数据至表格
+save	二进制保存指定对象
+save.image	二进制保存当前线程内所有对象
+write.table	将数据以表格形式写入文本
+write.csv	将数据以CSV表格形式写入文本
+cat	强制转化为字符后输出
+sink	输出转向到指定文件
+print	输出屏幕
+format	格式化
+
+
+
+
+
+
+!x	逻辑非
+x & y	逻辑与
+x && y	逻辑与（仅匹配并返回第一个值）
+x | y	逻辑或
+x || y	逻辑或（仅返回第一个值）
+x or (x,y)	异或
+
+
+
+
+
+
+
+
