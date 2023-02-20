@@ -1,6 +1,66 @@
 https://www.dataquest.io/blog/python-vs-r/
 https://guides.lib.uci.edu/dataanalysis/r
 https://blog.edx.org/r-vs.-python-for-data-science-explainer-learning-tips
+https://www.cnblogs.com/lantingg/p/9448809.html
+
+深入对比数据科学工具箱：Python和R
+
+建议：
+如果只是处理（小）数据的，用R。结果更可靠，速度可以接受，上手方便，多有现成的命令、程序可以用。
+要自己搞个算法、处理大数据、计算量大的，用python。开发效率高，一切尽在掌握。
+
+
+概述
+在真实的数据科学世界里，我们会有两个极端，一个是业务，一个是工程。
+偏向业务的数据科学被称为数据分析(Data Analysis),也就是A型数据科学。
+偏向工程的数据科学被称为数据构建(Data Building),也就是B型数据科学。
+
+从工具上来看，按由业务到工程的顺序，这个两条是：EXCEL >> R >> Python >> Scala
+
+当我们需要更多复杂的统计分析和数据处理时，我们就需要转移到 Python 和 R 上。
+在确定工程实施和大数据集操作时，我们就需要依赖 Scala 的静态类型等工程方法构建完整的数据分析系统。
+
+Scala 和 Excel 是两个极端，对于大多数创业公司而言，我们没有足够多的人手来实现专业化的分工，
+更多情况下，我们会在 Python 和 R 上花费更多的时间同时完成数据分析（A型）和数据构建（B型）的工作。
+而许多人也对 Python 和 R 的交叉使用存在疑惑，所以本文将从实践角度对 Python 和 R 中做了一个详细的比较。
+
+应用场景对比
+应用Python的场景
+网络爬虫/抓取：尽管 rvest 已经让 R 的网络爬虫/抓取变得容易，但 Python 的 beautifulsoup 和 Scrapy 更加成熟、功能更强大，
+结合django-scrapy我们可以很快的构建一个定制化的爬虫管理系统。
+
+连接数据库: R 提供了许多连接数据库的选择，但 Python 只用 sqlachemy 通过ORM的方式，一个包就解决了多种数据库连接的问题，
+且在生产环境中广泛使用。Python由于支持占位符操作，在拼接SQL语句时也更加方便。
+
+内容管理系统：基于Django，Python可以快速通过ORM建立数据库、后台管理系统，而R中的 Shiny 的鉴权功能暂时还需要付费使用。
+
+API构建：通过Tornado这个标准的网络处理库，Python也可以快速实现轻量级的API，而R则较为复杂。
+
+应用R的场景
+统计分析: 尽管 Python 里 Scipy、Pandas、statsmodels 提供了一系列统计工具 ，
+R 本身是专门为统计分析应用建立的，所以拥有更多此类工具。
+
+互动式图表/面板: 近来 bokeh、plotly、 intuitics 将 Python 的图形功能扩展到了网页浏览器，
+甚至我们可以用tornado+d3来进一步定制可视化页面，但 R 的 shiny 和 shiny dashboard 速度更快，所需代码更少。
+
+此外，当今数据分析团队拥有许多技能，选择哪种语言实际上基于背景知识和经验。
+对于一些应用，尤其是原型设计和开发类，工作人员使用已经熟悉的工具会比较快速。
+
+数据流编程对比
+接着，我们将通过下面几个方面，对Python 和 R 的数据流编程做出一个详细的对比。
+
+参数传递
+数据读取
+基本数据结构对照
+矩阵转化
+矩阵计算
+数据操作
+
+
+
+
+
+
 
 
 
