@@ -1,0 +1,36 @@
+time series
+https://r-stat.neocities.org/timeseries
+
+
+本部分介紹時間序列分析，包含相加模型與相乘模型。
+
+使用到的指令包含：
+ts() -資料轉換為時間序列物件
+decompose() -分解時間序列
+stl -Loess分解時間序列
+SMA() -簡單移動平均
+EMA() -指數移動平均
+HoltWinters() -Holt-Winters模型
+Holt() -Holt linear trend模型
+Winters() -Holt-Winters模型
+Box.test -Box-Ljung檢定
+ets() -狀態空間模型
+diff() -差分
+acf() -自相關函數
+pacf() -偏相關函數
+auto.arima() -ARIMA模型
+ts.plot() -多重時間序列圖
+
+
+
+
+
+
+
+
+
+
+
+
+
+
