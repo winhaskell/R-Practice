@@ -1,0 +1,22 @@
+Working with Sampled Data in R
+michael minn
+https://michaelminn.net/tutorials/r-sampling/
+
+We rarely have complete data about something we want to know. 
+For example, we often want to know who will win a political election, but we do not have the time to ask 
+every potential voter who they plan to vote for. And people's attitudes change during a campaign.
+
+However, it is possible to take get the opinion of a small number of people and make an estimate of
+the possible outcomes of the election.
+
+That small number of people is called a sample, and the estimate we make about the broader population is called an inference.
+
+Descriptive statistics is the use of statistical techniques to describe data.
+
+Inferential statistics is the use of statistical techniques to make inferences about a 
+complete population based on a sample from that population.
+
+
+
+
+
